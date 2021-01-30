@@ -6,6 +6,7 @@ public class KryziukaiNuliukai {
 
     public static int arYraLaimetojas(String[][] lenta, int pergale) {
         pergale = 0;
+        // Tikrinam ar yra laimėtojas eilutėse
         for (int i = 0; i < lenta.length; i++) {
             for (int j = 0; j < lenta.length - 2; j++) {
                 if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
@@ -23,6 +24,7 @@ public class KryziukaiNuliukai {
 
             }
         }
+        // Tikrinam ar yra laimėtojas stulpeliuose
         for (int i = 0; i < lenta.length - 2; i++) {
             for (int j = 0; j < lenta.length; j++) {
                 if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
@@ -40,6 +42,7 @@ public class KryziukaiNuliukai {
 
             }
         }
+        // Tikrinam ar yra laimėtojas įstrižai "\"
         for (int i = 0; i < lenta.length - 2; i++) {
             for (int j = 0; j < lenta.length - 2; j++) {
                 if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
@@ -56,6 +59,7 @@ public class KryziukaiNuliukai {
                 }
             }
         }
+        // Tikrinam ar yra laimėtojas įstrižai "/"
         for (int i = 0; i < lenta.length - 2; i++) {
             for (int j = 0; j < lenta.length - 2; j++) {
                 if ((lenta[i][j + 2] == "X|" || lenta[i][j + 2] == "X")
