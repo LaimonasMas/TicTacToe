@@ -4,87 +4,87 @@ import java.util.Scanner;
 
 public class KryziukaiNuliukai {
 
-        public static int arYraLaimetojas(String[][] lenta, int pergale) {
-            pergale = 0;
-            for (int i = 0; i < lenta.length; i++) {
-                for (int j = 0; j < lenta.length - 2; j++) {
-                    if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
-                            && (lenta[i][j + 1] == "X|" || lenta[i][j + 1] == "X")
-                            && (lenta[i][j + 2] == "X|" || lenta[i][j + 2] == "X")) {
-                        System.out.println("Laimėjo žaidėjas!!!");
-                        pergale++;
-                    }
-                    if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
-                            && (lenta[i][j + 1] == "O|" || lenta[i][j + 1] == "O")
-                            && (lenta[i][j + 2] == "O|" || lenta[i][j + 2] == "O")) {
-                        System.out.println("Laimėjo kompiuteris!!!");
-                        pergale++;
-                    }
+    public static int arYraLaimetojas(String[][] lenta, int pergale) {
+        pergale = 0;
+        for (int i = 0; i < lenta.length; i++) {
+            for (int j = 0; j < lenta.length - 2; j++) {
+                if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
+                        && (lenta[i][j + 1] == "X|" || lenta[i][j + 1] == "X")
+                        && (lenta[i][j + 2] == "X|" || lenta[i][j + 2] == "X")) {
+                    System.out.println("Laimėjo žaidėjas!!!");
+                    pergale++;
+                }
+                if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
+                        && (lenta[i][j + 1] == "O|" || lenta[i][j + 1] == "O")
+                        && (lenta[i][j + 2] == "O|" || lenta[i][j + 2] == "O")) {
+                    System.out.println("Laimėjo kompiuteris!!!");
+                    pergale++;
+                }
 
-                }
             }
-            pergale = 0;
-            for (int i = 0; i < lenta.length - 2; i++) {
-                for (int j = 0; j < lenta.length; j++) {
-                    if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
-                            && (lenta[i + 1][j] == "X|" || lenta[i + 1][j] == "X")
-                            && (lenta[i + 2][j] == "X|" || lenta[i + 2][j] == "X")) {
-                        System.out.println("Laimėjo žaidėjas!!!");
-                        pergale++;
-                    }
-                    if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
-                            && (lenta[i + 1][j] == "O|" || lenta[i + 1][j] == "O")
-                            && (lenta[i + 2][j] == "O|" || lenta[i + 2][j] == "O")) {
-                        System.out.println("Laimėjo kompiuteris!!!");
-                        pergale++;
-                    }
-
-                }
-            }
-            pergale = 0;
-            for (int i = 0; i < lenta.length - 2; i++) {
-                for (int j = 0; j < lenta.length - 2; j++) {
-                    if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
-                            && (lenta[i + 1][j + 1] == "X|" || lenta[i + 1][j + 1] == "X")
-                            && (lenta[i + 2][j + 2] == "X|" || lenta[i + 2][j + 2] == "X")) {
-                        System.out.println("Laimėjo žaidėjas!!!");
-                        pergale++;
-                    }
-                    if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
-                            && (lenta[i + 1][j + 1] == "O|" || lenta[i + 1][j + 1] == "O")
-                            && (lenta[i + 2][j + 2] == "O|" || lenta[i + 2][j + 2] == "O")) {
-                        System.out.println("Laimėjo kompiuteris!!!");
-                        pergale++;
-                    }
-                }
-            }
-            pergale = 0;
-            for (int i = 0; i < lenta.length - 2; i++) {
-                for (int j = 0; j < lenta.length - 2; j++) {
-                    if ((lenta[i][j + 2] == "X|" || lenta[i][j + 2] == "X")
-                            && (lenta[i + 1][j + 1] == "X|" || lenta[i + 1][j + 1] == "X")
-                            && (lenta[i + 2][j] == "X|" || lenta[i + 2][j] == "X")) {
-                        System.out.println("Laimėjo žaidėjas!!!");
-                        pergale++;
-                    }
-                    if ((lenta[i][j + 2] == "O|" || lenta[i][j + 2] == "O")
-                            && (lenta[i + 1][j + 1] == "O|" || lenta[i + 1][j + 1] == "O")
-                            && (lenta[i + 2][j] == "O|" || lenta[i + 2][j] == "O")) {
-                        System.out.println("Laimėjo kompiuteris!!!");
-                        pergale++;
-                    }
-
-                }
-            }
-            System.out.println("Suskaiciavau pergales: " + pergale);
-            return pergale;
         }
-    
+        pergale = 0;
+        for (int i = 0; i < lenta.length - 2; i++) {
+            for (int j = 0; j < lenta.length; j++) {
+                if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
+                        && (lenta[i + 1][j] == "X|" || lenta[i + 1][j] == "X")
+                        && (lenta[i + 2][j] == "X|" || lenta[i + 2][j] == "X")) {
+                    System.out.println("Laimėjo žaidėjas!!!");
+                    pergale++;
+                }
+                if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
+                        && (lenta[i + 1][j] == "O|" || lenta[i + 1][j] == "O")
+                        && (lenta[i + 2][j] == "O|" || lenta[i + 2][j] == "O")) {
+                    System.out.println("Laimėjo kompiuteris!!!");
+                    pergale++;
+                }
+
+            }
+        }
+        pergale = 0;
+        for (int i = 0; i < lenta.length - 2; i++) {
+            for (int j = 0; j < lenta.length - 2; j++) {
+                if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
+                        && (lenta[i + 1][j + 1] == "X|" || lenta[i + 1][j + 1] == "X")
+                        && (lenta[i + 2][j + 2] == "X|" || lenta[i + 2][j + 2] == "X")) {
+                    System.out.println("Laimėjo žaidėjas!!!");
+                    pergale++;
+                }
+                if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
+                        && (lenta[i + 1][j + 1] == "O|" || lenta[i + 1][j + 1] == "O")
+                        && (lenta[i + 2][j + 2] == "O|" || lenta[i + 2][j + 2] == "O")) {
+                    System.out.println("Laimėjo kompiuteris!!!");
+                    pergale++;
+                }
+            }
+        }
+        pergale = 0;
+        for (int i = 0; i < lenta.length - 2; i++) {
+            for (int j = 0; j < lenta.length - 2; j++) {
+                if ((lenta[i][j + 2] == "X|" || lenta[i][j + 2] == "X")
+                        && (lenta[i + 1][j + 1] == "X|" || lenta[i + 1][j + 1] == "X")
+                        && (lenta[i + 2][j] == "X|" || lenta[i + 2][j] == "X")) {
+                    System.out.println("Laimėjo žaidėjas!!!");
+                    pergale++;
+                }
+                if ((lenta[i][j + 2] == "O|" || lenta[i][j + 2] == "O")
+                        && (lenta[i + 1][j + 1] == "O|" || lenta[i + 1][j + 1] == "O")
+                        && (lenta[i + 2][j] == "O|" || lenta[i + 2][j] == "O")) {
+                    System.out.println("Laimėjo kompiuteris!!!");
+                    pergale++;
+                }
+
+            }
+        }
+        System.out.println("Suskaiciavau pergales: " + pergale);
+        return pergale;
+    }
+
     public static void main(String[] args) {
 
         int pergale = 0;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Pasirinkite lentos dydį. Įveskite skaičių nuo 3 iki 9:");        
+        System.out.println("Pasirinkite lentos dydį. Įveskite skaičių nuo 3 iki 9:");
         // Pasirenkam lentos dydį
         int dydis = sc.nextInt();
         // Apsauga nuo per didelės lentos
@@ -93,7 +93,7 @@ public class KryziukaiNuliukai {
             dydis = sc.nextInt();
         }
         // Suformuoja lentą
-        String[][] lenta = new String[dydis][dydis];       
+        String[][] lenta = new String[dydis][dydis];
         for (int i = 0; i < lenta.length; i++) {
             for (int j = 0; j < lenta.length; j++) {
                 if (j < lenta.length - 1 && i < lenta.length - 1) {
@@ -162,8 +162,79 @@ public class KryziukaiNuliukai {
                 System.out.println(" ");
             }
             // Patikrinam ar yra laimėtojas                       
-            arYraLaimetojas(lenta, pergale);
-            System.out.println("Pergalių sk: " + pergale);
+
+            pergale = 0;
+            for (int i = 0; i < lenta.length; i++) {
+                for (int j = 0; j < lenta.length - 2; j++) {
+                    if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
+                            && (lenta[i][j + 1] == "X|" || lenta[i][j + 1] == "X")
+                            && (lenta[i][j + 2] == "X|" || lenta[i][j + 2] == "X")) {
+                        System.out.println("Laimėjo žaidėjas!!!");
+                        pergale++;
+                    }
+                    if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
+                            && (lenta[i][j + 1] == "O|" || lenta[i][j + 1] == "O")
+                            && (lenta[i][j + 2] == "O|" || lenta[i][j + 2] == "O")) {
+                        System.out.println("Laimėjo kompiuteris!!!");
+                        pergale++;
+                    }
+
+                }
+            }
+
+            for (int i = 0; i < lenta.length - 2; i++) {
+                for (int j = 0; j < lenta.length; j++) {
+                    if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
+                            && (lenta[i + 1][j] == "X|" || lenta[i + 1][j] == "X")
+                            && (lenta[i + 2][j] == "X|" || lenta[i + 2][j] == "X")) {
+                        System.out.println("Laimėjo žaidėjas!!!");
+                        pergale++;
+                    }
+                    if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
+                            && (lenta[i + 1][j] == "O|" || lenta[i + 1][j] == "O")
+                            && (lenta[i + 2][j] == "O|" || lenta[i + 2][j] == "O")) {
+                        System.out.println("Laimėjo kompiuteris!!!");
+                        pergale++;
+                    }
+
+                }
+            }
+
+            for (int i = 0; i < lenta.length - 2; i++) {
+                for (int j = 0; j < lenta.length - 2; j++) {
+                    if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
+                            && (lenta[i + 1][j + 1] == "X|" || lenta[i + 1][j + 1] == "X")
+                            && (lenta[i + 2][j + 2] == "X|" || lenta[i + 2][j + 2] == "X")) {
+                        System.out.println("Laimėjo žaidėjas!!!");
+                        pergale++;
+                    }
+                    if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
+                            && (lenta[i + 1][j + 1] == "O|" || lenta[i + 1][j + 1] == "O")
+                            && (lenta[i + 2][j + 2] == "O|" || lenta[i + 2][j + 2] == "O")) {
+                        System.out.println("Laimėjo kompiuteris!!!");
+                        pergale++;
+                    }
+                }
+            }
+
+            for (int i = 0; i < lenta.length - 2; i++) {
+                for (int j = 0; j < lenta.length - 2; j++) {
+                    if ((lenta[i][j + 2] == "X|" || lenta[i][j + 2] == "X")
+                            && (lenta[i + 1][j + 1] == "X|" || lenta[i + 1][j + 1] == "X")
+                            && (lenta[i + 2][j] == "X|" || lenta[i + 2][j] == "X")) {
+                        System.out.println("Laimėjo žaidėjas!!!");
+                        pergale++;
+                    }
+                    if ((lenta[i][j + 2] == "O|" || lenta[i][j + 2] == "O")
+                            && (lenta[i + 1][j + 1] == "O|" || lenta[i + 1][j + 1] == "O")
+                            && (lenta[i + 2][j] == "O|" || lenta[i + 2][j] == "O")) {
+                        System.out.println("Laimėjo kompiuteris!!!");
+                        pergale++;
+                    }
+
+                }
+            }
+            System.out.println("Suskaiciavau pergales: " + pergale);
             if (pergale > 0) {
                 break;
             }
@@ -207,8 +278,79 @@ public class KryziukaiNuliukai {
                 System.out.println(" ");
             }
             // Patikrinam ar yra laimėtojas          
-            arYraLaimetojas(lenta, pergale);
-            System.out.println("Pergalių sk: " + pergale);
+
+
+            for (int i = 0; i < lenta.length; i++) {
+                for (int j = 0; j < lenta.length - 2; j++) {
+                    if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
+                            && (lenta[i][j + 1] == "X|" || lenta[i][j + 1] == "X")
+                            && (lenta[i][j + 2] == "X|" || lenta[i][j + 2] == "X")) {
+                        System.out.println("Laimėjo žaidėjas!!!");
+                        pergale++;
+                    }
+                    if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
+                            && (lenta[i][j + 1] == "O|" || lenta[i][j + 1] == "O")
+                            && (lenta[i][j + 2] == "O|" || lenta[i][j + 2] == "O")) {
+                        System.out.println("Laimėjo kompiuteris!!!");
+                        pergale++;
+                    }
+
+                }
+            }
+
+            for (int i = 0; i < lenta.length - 2; i++) {
+                for (int j = 0; j < lenta.length; j++) {
+                    if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
+                            && (lenta[i + 1][j] == "X|" || lenta[i + 1][j] == "X")
+                            && (lenta[i + 2][j] == "X|" || lenta[i + 2][j] == "X")) {
+                        System.out.println("Laimėjo žaidėjas!!!");
+                        pergale++;
+                    }
+                    if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
+                            && (lenta[i + 1][j] == "O|" || lenta[i + 1][j] == "O")
+                            && (lenta[i + 2][j] == "O|" || lenta[i + 2][j] == "O")) {
+                        System.out.println("Laimėjo kompiuteris!!!");
+                        pergale++;
+                    }
+
+                }
+            }
+
+            for (int i = 0; i < lenta.length - 2; i++) {
+                for (int j = 0; j < lenta.length - 2; j++) {
+                    if ((lenta[i][j] == "X|" || lenta[i][j] == "X")
+                            && (lenta[i + 1][j + 1] == "X|" || lenta[i + 1][j + 1] == "X")
+                            && (lenta[i + 2][j + 2] == "X|" || lenta[i + 2][j + 2] == "X")) {
+                        System.out.println("Laimėjo žaidėjas!!!");
+                        pergale++;
+                    }
+                    if ((lenta[i][j] == "O|" || lenta[i][j] == "O")
+                            && (lenta[i + 1][j + 1] == "O|" || lenta[i + 1][j + 1] == "O")
+                            && (lenta[i + 2][j + 2] == "O|" || lenta[i + 2][j + 2] == "O")) {
+                        System.out.println("Laimėjo kompiuteris!!!");
+                        pergale++;
+                    }
+                }
+            }
+
+            for (int i = 0; i < lenta.length - 2; i++) {
+                for (int j = 0; j < lenta.length - 2; j++) {
+                    if ((lenta[i][j + 2] == "X|" || lenta[i][j + 2] == "X")
+                            && (lenta[i + 1][j + 1] == "X|" || lenta[i + 1][j + 1] == "X")
+                            && (lenta[i + 2][j] == "X|" || lenta[i + 2][j] == "X")) {
+                        System.out.println("Laimėjo žaidėjas!!!");
+                        pergale++;
+                    }
+                    if ((lenta[i][j + 2] == "O|" || lenta[i][j + 2] == "O")
+                            && (lenta[i + 1][j + 1] == "O|" || lenta[i + 1][j + 1] == "O")
+                            && (lenta[i + 2][j] == "O|" || lenta[i + 2][j] == "O")) {
+                        System.out.println("Laimėjo kompiuteris!!!");
+                        pergale++;
+                    }
+
+                }
+            }
+            System.out.println("Suskaiciavau pergales: " + pergale);
             if (pergale > 0) {
                 break;
             }
