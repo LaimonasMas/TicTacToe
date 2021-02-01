@@ -81,6 +81,20 @@ public class KryziukaiNuliukai {
     }
 
     public static void main(String[] args) {
+        
+////Sezaites geras "try catch" pvz:        
+//                int dydis = 0;
+//        do {
+//            Scanner sc = new Scanner(System.in);
+//            System.out.println("Pasirink zaidimo lentos dydi. Ivesk skaiciu nuo 3 iki 9");
+//            String s = sc.nextLine();
+//            try {
+//                int x = Integer.parseInt(s);
+//                dydis = x;
+//            } catch (NumberFormatException nfe) {
+//                System.out.println("Ivesk s k a i c i u  nuuu");
+//            }
+//        } while (dydis < 3 || dydis > 9);
 
         int pergale = 0;
         Scanner sc = new Scanner(System.in);
