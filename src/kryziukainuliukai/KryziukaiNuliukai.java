@@ -81,14 +81,14 @@ public class KryziukaiNuliukai {
     }
 
     public static void main(String[] args) {
-        
+
         int pergale = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("Pasirinkite lentos dydį. Įveskite skaičių nuo 3 iki 9:");
         // Pasirenkam lentos dydį
         int dydis = sc.nextInt();
         // Apsauga nuo per didelės lentos
-        while (dydis < 3 | dydis > 9) {
+        while (dydis < 3 || dydis > 9) {
             System.out.println("Neteisingai įvesta reikšmė. Prašau įveskite skaičių nuo 3 iki 9:");
             dydis = sc.nextInt();
         }
